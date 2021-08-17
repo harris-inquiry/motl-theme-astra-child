@@ -28,7 +28,7 @@ module.exports = {
     './*.php',
   ],
   darkMode: false,
-  theme: minified_theme_settings,  // comment out when building?
+  // theme: minified_theme_settings,  // uncomment for smaller builds?
   variants: {
     extend: {},
   },

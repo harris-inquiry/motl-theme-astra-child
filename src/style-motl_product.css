@@ -35,3 +35,16 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Move down stickies when logged in, and not on phone*/
+@media screen and (min-width: 600px){
+  .logged-in .sticky.top-0 {
+    top: 2rem;
+  }
+  .logged-in .sticky.top-24 {
+    top: 8rem;
+  }
+}
