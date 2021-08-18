@@ -28,7 +28,7 @@ function conditional_get_table_row($label, $field_name)
         <p class="text-gray-400 mb-1"><?php the_field("motl-medium"); ?></p>
       </div>
       <a class="p-2" href="/About">
-        <img id="artist-icon" class="h-16 w-16 rounded-full object-cover" src="<?php echo $motl_cover_path_stephen_photo; ?>" alt="Stephen Daniel">
+        <img height="64" width="64" class="h-16 w-16 rounded-full object-cover" src="<?php echo $motl_cover_path_stephen_photo; ?>" alt="Stephen Daniel">
       </a>
     </div>
 
@@ -38,14 +38,15 @@ function conditional_get_table_row($label, $field_name)
         <div class="sticky top-24">
 
           <?php
-          $image = get_field('motl-image');
-          if ($image) {
-            // Image variables.
-            $url = $image['url'];
-            $alt = $image['alt'];
-          }
-          ?>
-          <img class="w-full p-2" src="<?php echo esc_url($url); ?>" alt="<?php echo esc_attr($alt); ?>">
+          $motl_image_id = get_field('motl-image');
+          if ($motl_image_id) {
+            echo wp_get_attachment_image(
+              $motl_image_id,
+              "full",
+              false,
+              array("class" => "w-full p-2")
+            );
+          } ?>
         </div>
       </div>
 
@@ -84,7 +85,7 @@ function conditional_get_table_row($label, $field_name)
             <td>
               <div class="flex items-center">
                 <a href="/About">
-                  <img id="artist-icon" class="h-12 w-12 rounded-full object-cover" src="<?php echo $motl_cover_path_stephen_photo; ?>" alt="Stephen Daniel">
+                  <img height="64" width="64" class="h-12 w-12 rounded-full object-cover" src="<?php echo $motl_cover_path_stephen_photo; ?>" alt="Stephen Daniel">
                 </a>
                 <a href="/About" class="text-blue-500 font-semibold italic">
                   <div class="ml-2">Stephen Daniel</div>

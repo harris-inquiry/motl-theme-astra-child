@@ -40,5 +40,3 @@ get_header(); ?>
 <?php endif ?>
 
 <?php get_footer(); ?>
-
-<!-- get_template_part( 'template-parts/motl_product/content' ); -->
