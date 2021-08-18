@@ -34,7 +34,7 @@ function conditional_get_table_row($label, $field_name)
 
     <div class="sm:flex my-2 sm:space-x-2">
 
-      <div id="left-content" class="max-w-lg sm:w-1/2 flex-shrink-0">
+      <div id="left-content" class="flex-shrink-0 sm:max-w-1/2">
         <div class="sticky top-24">
 
           <?php
@@ -44,7 +44,8 @@ function conditional_get_table_row($label, $field_name)
               $motl_image_id,
               "full",
               false,
-              array("class" => "w-full p-2")
+              array("class" => "p-2 mx-auto",
+                    "id" => "artwork-image")
             );
           } ?>
         </div>
