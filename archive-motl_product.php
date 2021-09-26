@@ -29,7 +29,7 @@ get_header(); ?>
 		<!-- ?php astra_content_loop(); ? -->
 
 		<div id="main" class="site-main">
-			<div class="ast-row sm:flex flex-wrap">
+			<div class="ast-row grid sm:grid-cols-2 lg:grid-cols-3">
 			<?php if (have_posts()):
 				while (have_posts()): the_post(); ?>
 
