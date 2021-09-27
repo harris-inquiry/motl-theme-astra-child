@@ -23,7 +23,7 @@ function conditional_get_table_row($label, $field_name)
 
   <div id="preview-content">
     <div id="title" class="sticky top-0 flex justify-between z-50 bg-white py-2 opacity-95 border-2 rounded">
-      <div class="ml-4 italic">
+      <div class="ml-4 italic my-auto">
         <h1 class="font-medium mb-1 text-4xl"><?php echo the_title(); ?></h1>
         <p class="text-gray-400 mb-1"><?php the_field("motl-medium"); ?></p>
       </div>
