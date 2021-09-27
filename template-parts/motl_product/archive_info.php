@@ -17,7 +17,7 @@
             "full",
             false,
             array("class" => "",
-                  "style" => "position:relative;top:-12%;")
+                  "style" => "position:relative;")
           );
         } ?>
       </div>
