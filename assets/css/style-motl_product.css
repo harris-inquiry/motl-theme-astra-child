@@ -628,8 +628,17 @@ td:first-child {
   margin-bottom: 2rem;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
 }
 
 .mb-1 {
@@ -658,6 +667,10 @@ td:first-child {
 
 .table {
   display: table;
+}
+
+.grid {
+  display: grid;
 }
 
 .h-12 {
@@ -804,9 +817,17 @@ td:first-child {
   padding: 1rem;
 }
 
+.p-5 {
+  padding: 1.25rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-2xl {
@@ -853,6 +874,10 @@ td:first-child {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgba(59, 130, 246, var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .opacity-95 {
@@ -916,6 +941,10 @@ body {
     display: flex;
   }
 
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -927,6 +956,9 @@ body {
 }
 
 @media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 @media (min-width: 1280px) {
