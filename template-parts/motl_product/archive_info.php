@@ -17,8 +17,7 @@
             "full",
             false,
             array("class" => "",
-                  "style" => "position:relative;top:-12%;",
-                  "id" => "artwork-image")
+                  "style" => "position:relative;top:-12%;")
           );
         } ?>
       </div>
@@ -26,3 +25,4 @@
   </div>
   <hr style="height: 1px;margin-top:20px;">
 </article>
+
