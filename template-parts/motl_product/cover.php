@@ -23,7 +23,7 @@ function conditional_get_table_row($label, $field_name)
 
   <div id="preview-content">
     <div id="title" class="sticky top-0 flex justify-between z-50 bg-white py-2 opacity-95 border-2 rounded">
-      <div class="ml-4 italic my-auto">
+      <div class="ml-4 my-auto">
         <h1 class="font-medium mb-1 text-4xl"><?php echo the_title(); ?></h1>
         <p class="text-gray-400 mb-1"><?php the_field("motl-medium"); ?></p>
       </div>
@@ -69,10 +69,7 @@ function conditional_get_table_row($label, $field_name)
         <div id="contacts" class="my-4 mb-8">
           <div class="p-2 flex space-x-2">
             <a href="/contact">
-              <button class="text-white bg-yellow-300 font-bold rounded-md p-2">Inquire</button>
-            </a>
-            <a href="#main">
-              <button class="text-white bg-gray-800 font-bold rounded-md p-2">Learn More</button>
+              <button class="text-white bg-gray-800 font-bold px-6 py-3">Inquire</button>
             </a>
           </div>
         </div>
