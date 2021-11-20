@@ -765,10 +765,6 @@ td:first-child {
   border-radius: 0.25rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .border-2 {
   border-width: 2px;
 }
@@ -787,11 +783,6 @@ td:first-child {
   background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
 }
 
-.bg-yellow-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(252, 211, 77, var(--tw-bg-opacity));
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -805,9 +796,19 @@ td:first-child {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pb-6 {
