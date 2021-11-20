@@ -41,8 +41,10 @@ function conditional_get_table_row($label, $field_name)
               $motl_image_id,
               "full",
               false,
-              array("class" => "p-2 mx-auto",
-                    "id" => "artwork-image")
+              array(
+                "class" => "p-2 mx-auto",
+                "id" => "artwork-image"
+              )
             );
           } ?>
         </div>
@@ -66,7 +68,9 @@ function conditional_get_table_row($label, $field_name)
 
         <div id="contacts" class="my-4 mb-8">
           <div class="p-2 flex space-x-2">
-            <button class="text-white bg-yellow-300 font-bold rounded-md p-2">Inquire</button>
+            <a href="/contact">
+              <button class="text-white bg-yellow-300 font-bold rounded-md p-2">Inquire</button>
+            </a>
             <a href="#main">
               <button class="text-white bg-gray-800 font-bold rounded-md p-2">Learn More</button>
             </a>
