@@ -27,9 +27,6 @@ function conditional_get_table_row($label, $field_name)
         <h1 class="font-medium mb-1 text-4xl"><?php echo the_title(); ?></h1>
         <p class="text-gray-400 mb-1"><?php the_field("motl-medium"); ?></p>
       </div>
-      <a class="p-2" href="/About">
-        <img height="64" width="64" class="h-16 w-16 rounded-full object-cover" src="<?php echo $motl_cover_path_stephen_photo; ?>" alt="Stephen Daniel">
-      </a>
     </div>
 
     <div class="sm:flex my-2 sm:space-x-2">
@@ -80,19 +77,6 @@ function conditional_get_table_row($label, $field_name)
           <tr>
             <td>Title</td>
             <td><?php echo the_title(); ?></td>
-          </tr>
-          <tr>
-            <td>Artist</td>
-            <td>
-              <div class="flex items-center">
-                <a href="/About">
-                  <img height="64" width="64" class="h-12 w-12 rounded-full object-cover" src="<?php echo $motl_cover_path_stephen_photo; ?>" alt="Stephen Daniel">
-                </a>
-                <a href="/About" class="text-blue-500 font-semibold italic">
-                  <div class="ml-2">Stephen Daniel</div>
-                </a>
-              </div>
-            </td>
           </tr>
           <?php conditional_get_table_row("Medium", "motl-medium"); ?>
           <?php conditional_get_table_row("Dimensions", "motl-dimensions"); ?>

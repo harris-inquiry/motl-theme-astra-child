@@ -1,14 +1,8 @@
 
-<article class="p-5">
-  <div>
-    <div class="title-info italic text-center">
-      <h2 class="entry-title mb-0 underline">
-        <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-      </h2>
-      <p class="text-gray-400 mb-1"><?php the_field("motl-medium"); ?></p>
-    </div>
+<article class="pb-6">
+  <div class="relative">
     <a href="<?php the_permalink(); ?>" rel="bookmark">
-      <div style="height:20rem;overflow:hidden;justify-content:center;">
+      <div style="justify-content:center;">
       <?php
         $motl_image_id = get_field('motl-image');
         if ($motl_image_id) {
@@ -21,8 +15,13 @@
           );
         } ?>
       </div>
+    <div class="title-info absolute bottom-0 px-4 py-2 text-white" style="width: 100%;background: linear-gradient(45deg, #000000a3, transparent 60%);">
+      <h2 class="entry-title mb-0 text-white">
+        <?php the_title(); ?>
+      </h2>
+      <p class="italic mb-1"><?php the_field("motl-medium"); ?></p>
+    </div>
     </a>
   </div>
-  <hr style="height: 1px;margin-top:20px;">
 </article>
 
