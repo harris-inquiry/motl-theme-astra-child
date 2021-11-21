@@ -1,13 +1,15 @@
 {
   "devDependencies": {
     "autoprefixer": "^10.3.1",
+    "cssnano": "^5.0.11",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2",
     "tailwindcss": "^2.2.7"
   },
   "scripts": {
-    "devwatch": "postcss src/*.css --dir assets/css --watch",
     "devbuild": "postcss src/*.css --dir assets/css",
+    "devwatch": "npm run devbuild && postcss src/style-motl_product.css --dir assets/css --watch",
     "build": "NODE_ENV=production npm run devbuild"
   }
 }

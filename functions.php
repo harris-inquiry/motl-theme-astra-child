@@ -23,8 +23,12 @@ function child_enqueue_styles() {
                       CHILD_THEME_MOTL_ASTRA_CHILD_VERSION,
                       'all' );
 
-    wp_enqueue_style( 'motl-product-tailwind-style',
+    wp_enqueue_style( 'motl-product-style',
                       get_stylesheet_directory_uri() . "/assets/css/style-motl_product.css",
+                      array(),
+                      CHILD_THEME_MOTL_ASTRA_CHILD_VERSION );
+    wp_enqueue_style( 'motl-product-tailwind-style',
+                      get_stylesheet_directory_uri() . "/assets/css/tailwind-css.css",
                       array(),
                       CHILD_THEME_MOTL_ASTRA_CHILD_VERSION );
 }

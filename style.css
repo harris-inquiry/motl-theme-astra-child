@@ -3,7 +3,7 @@
  Description:  Meditation on the line -- Twenty Twenty-One Child Theme
  Author:       Harrison Quarry
  Template:     astra
- Version:      1.0.9
+ Version:      1.0.10
 */
 
 #gilder-video {
@@ -22,22 +22,3 @@
 .single-motl_product #right-content {
 	width: 100%
 }
-
-
-/* Temp hover on motl-samples*/
-.motl-sample_image {
-	transition-duration: 0.5s;
-}
-.motl-sample:hover .motl-sample_image {
-	transform: scale(1.1);
-}
-.motl-sample_text {
-	width: 100%;
-	opacity: 0;
-	background: linear-gradient(45deg, #000000a3, transparent);
-	transition: opacity .8s;
-}
-.motl-sample:hover .motl-sample_text {
-	opacity: 1;
-}
-
