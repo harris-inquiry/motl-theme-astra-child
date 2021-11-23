@@ -5,11 +5,14 @@
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.2",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.7",
+    "webpack": "^5.64.2",
+    "webpack-cli": "^4.9.1"
   },
   "scripts": {
-    "devbuild": "postcss src/*.css --dir assets/css",
-    "devwatch": "npm run devbuild && postcss src/style-motl_product.css --dir assets/css --watch",
+    "start": "webpack",
+    "devbuild": "postcss src/css/*.css --dir build/css",
+    "devwatch": "npm run devbuild && postcss src/css/style-motl_product.css --dir build/css --watch",
     "build": "NODE_ENV=production npm run devbuild"
   }
 }

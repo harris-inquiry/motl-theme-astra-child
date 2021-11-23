@@ -1,18 +1,8 @@
 # System Files
 .DS_Store
 
-# Emacs-Files
-.#*
-.tern-project
-
 # Libraries
 node_modules/
 
 # Compiled
-build/
-
-### PYTHON ###
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# build/
