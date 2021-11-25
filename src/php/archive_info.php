@@ -24,4 +24,5 @@
       </div>
     </a>
   </div>
+  <%- include("part.php") %>
 </article>
