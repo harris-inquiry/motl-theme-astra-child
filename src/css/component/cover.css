@@ -27,16 +27,19 @@ td {
 
 
 /* Limit artwork image height to always stay in view */
-#artwork-image {
+.artwork-image {
   max-height: calc(100vh - 6rem);
   width: auto;
-}
-.logged-in #artwork-image {
+} /* TODO : remove? */
+.logged-in .artwork-image {
   max-height: calc(100vh - 8rem);
 }
-@media screen and (min-width: 640px) { /* 640px where tailwind ends 'small' screen size*/
-  .sm\:max-w-1\/2 {
-    max-width: 50%;
+
+@layer utilities {
+  @responsive {
+    .max-w-1\/2 {
+      max-width: 60%;
+    }
   }
 }
 

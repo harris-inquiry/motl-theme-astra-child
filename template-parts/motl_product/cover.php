@@ -29,6 +29,7 @@ function conditional_get_table_row($label, $field_name)
         <div>
 
           <?php
+          $motl_image_classes = "p-2 mx-auto";
           $motl_image_id = get_field('motl-image');
           if ($motl_image_id) {
             echo wp_get_attachment_image(
@@ -36,20 +37,41 @@ function conditional_get_table_row($label, $field_name)
               "full",
               false,
               array(
-                "class" => "p-2 mx-auto",
-                "id" => "artwork-image"
-              )
-            );
-            echo wp_get_attachment_image(
-              $motl_image_id,
-              "full",
-              false,
-              array(
-                "class" => "p-2 mx-auto",
-                "id" => "artwork-image"
+                "class" => $motl_image_classes,
+                "id" => "motl-image1"
               )
             );
           } ?>
+
+          <?php
+          $motl_image2_id = get_field('motl-image2');
+          if ( $motl_image2_id ) {
+            echo wp_get_attachment_image(
+              $motl_image2_id,
+              "full",
+              false,
+              array(
+                "class" => $motl_image_classes,
+                "id" => "motl-image2"
+              )
+            );
+          }
+          ?>
+
+          <?php
+          $motl_image3_id = get_field('motl-image3');
+          if ( $motl_image3_id ) {
+            echo wp_get_attachment_image(
+              $motl_image3_id,
+              "full",
+              false,
+              array(
+                "class" => $motl_image_classes,
+                "id" => "motl-image3"
+              )
+            );
+          }
+          ?>
 
           <!-- TODO - more images -->
         </div>
@@ -57,21 +79,28 @@ function conditional_get_table_row($label, $field_name)
 
       <div id="right-content" class="mt-4 w-full">
         <div class="sticky top-1/3 mb-8 mt-4">
-          <div id="title" class="top-0 flex justify-between z-50 bg-white py-2 opacity-95 border-2 rounded shadow-md">
+          <div id="title" class="top-0 flex justify-between z-50 bg-white py-6 opacity-95 border-2 rounded shadow-md">
             <div class="mx-4 my-auto">
               <h1 class="font-medium mb-1 text-4xl"><?php echo the_title(); ?></h1>
               <p class="text-gray-700 mb-1 text-xl">
-                <?php if (get_field("motl-date-created")) {
-                  the_field("motl-date-created"); 
-                  echo ",";
-                } ?>
-                <?php if (get_field("motl-medium")) {
-                  the_field("motl-medium"); 
-                  echo ",";
-                } ?>
-                <?php if (get_field("motl-dimensions")) {
-                  the_field("motl-dimensions");
-                } ?>
+
+                <?php if (get_field("motl-date-created")): ?>
+                  <span class="inline-block">
+                    <?php the_field("motl-date-created"); ?>,
+                  </span>
+                <?php endif; ?>
+
+                <?php if (get_field("motl-medium")): ?>
+                  <span class="inline-block">
+                    <?php the_field("motl-medium"); ?>,
+                  </span>
+                <?php endif; ?>
+
+                <?php if (get_field("motl-dimensions")): ?>
+                  <span class="inline-block">
+                    <?php the_field("motl-dimensions"); ?>
+                  </span>
+                <?php endif; ?>
               </p>
             </div>
           </div>
