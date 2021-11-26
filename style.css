@@ -3,22 +3,17 @@
  Description:  Meditation on the line -- Twenty Twenty-One Child Theme
  Author:       Harrison Quarry
  Template:     astra
- Version:      1.0.10
+ Version:      1.0.12
 */
 
-#gilder-video {
-	height: 100%;
-}
-#gilder-video > * {
-    width: auto;
-    margin: auto;
+@media screen and (min-width: 500px){ /* 600px when wordpress sticks loggin-screen to top*/
+	#gilder-video > * {
+		width: auto;
+		margin: auto;
+	}
 }
 
 .full-height-image img {
 	width: auto;
 	max-height: calc(100vh - 6rem);
-}
-
-.single-motl_product #right-content {
-	width: 100%
 }
