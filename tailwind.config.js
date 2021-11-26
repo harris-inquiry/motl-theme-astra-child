@@ -1,6 +1,8 @@
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+const isDevMode = process.env.NODE_ENV !== 'production';
+
 const minified_theme_settings = {
   colors: {
     transparent: 'transparent',
@@ -21,15 +23,20 @@ const minified_theme_settings = {
 }
 
 
-module.exports = {
+let tailwindConfig = {
   purge: [
     './template-parts/**/*.php',
     './*.php',
   ],
   darkMode: false,
-  // theme: minified_theme_settings,  // uncomment for smaller builds?
   variants: {
     extend: {},
   },
   plugins: [],
 }
+
+if( isDevMode ) {
+  tailwindConfig.theme = minified_theme_settings
+}
+
+module.exports = tailwindConfig;

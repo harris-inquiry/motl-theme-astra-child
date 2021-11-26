@@ -22,17 +22,11 @@ function conditional_get_table_row($label, $field_name)
 <div class="container mx-auto p-4">
 
   <div id="preview-content">
-    <div id="title" class="sticky top-0 flex justify-between z-50 bg-white py-2 opacity-95 border-2 rounded">
-      <div class="ml-4 my-auto">
-        <h1 class="font-medium mb-1 text-4xl"><?php echo the_title(); ?></h1>
-        <p class="text-gray-400 mb-1"><?php the_field("motl-medium"); ?></p>
-      </div>
-    </div>
 
-    <div class="sm:flex my-2 sm:space-x-2">
+    <div class="sm:flex my-2 sm:space-x-2 justify-center">
 
-      <div id="left-content" class="flex-shrink-0 sm:max-w-1/2">
-        <div class="sticky top-24">
+      <div id="left-content" class="flex-shrink-0 sm:max-w-1/2" style="min-width:40%">
+        <div>
 
           <?php
           $motl_image_id = get_field('motl-image');
@@ -46,46 +40,48 @@ function conditional_get_table_row($label, $field_name)
                 "id" => "artwork-image"
               )
             );
+            echo wp_get_attachment_image(
+              $motl_image_id,
+              "full",
+              false,
+              array(
+                "class" => "p-2 mx-auto",
+                "id" => "artwork-image"
+              )
+            );
           } ?>
+
+          <!-- TODO - more images -->
         </div>
       </div>
 
-      <div id="right-content" class="mt-4">
-        <div class="mb-8 mt-4">
+      <div id="right-content" class="mt-4 w-full">
+        <div class="sticky top-1/3 mb-8 mt-4">
+          <div id="title" class="top-0 flex justify-between z-50 bg-white py-2 opacity-95 border-2 rounded shadow-md">
+            <div class="mx-4 my-auto">
+              <h1 class="font-medium mb-1 text-4xl"><?php echo the_title(); ?></h1>
+              <p class="text-gray-700 mb-1 text-xl">
+                <?php if (get_field("motl-date-created")) {
+                  the_field("motl-date-created"); 
+                  echo ",";
+                } ?>
+                <?php if (get_field("motl-medium")) {
+                  the_field("motl-medium"); 
+                  echo ",";
+                } ?>
+                <?php if (get_field("motl-dimensions")) {
+                  the_field("motl-dimensions");
+                } ?>
+              </p>
+            </div>
+          </div>
           <?php $motl_quote_var = "motl-tag-line";
           if (get_field($motl_quote_var)) : ?>
-            <blockquote class="mb-6 font-semibold text-2xl text-gray-600">
+            <blockquote class="my-6 font-semibold text-2xl text-gray-600 not-italic">
               <?php the_field($motl_quote_var); ?>
             </blockquote>
           <?php endif; ?>
-
-          <div id="description">
-            <?php if (get_field("motl-description")) {
-              the_field("motl-description");
-            } ?>
-          </div>
         </div>
-
-        <div id="contacts" class="my-4 mb-8">
-          <div class="p-2 flex space-x-2">
-            <a href="/contact">
-              <button class="text-white bg-gray-800 font-bold px-6 py-3">Inquire</button>
-            </a>
-          </div>
-        </div>
-
-        <table>
-          <tr>
-            <td>Title</td>
-            <td><?php echo the_title(); ?></td>
-          </tr>
-          <?php conditional_get_table_row("Medium", "motl-medium"); ?>
-          <?php conditional_get_table_row("Dimensions", "motl-dimensions"); ?>
-          <?php conditional_get_table_row("Date Created", "motl-date-created"); ?>
-          <?php conditional_get_table_row("Subject", "motl-subject"); ?>
-          <?php conditional_get_table_row("Inspiration", "motl-inspiration"); ?>
-          <?php conditional_get_table_row("Theme", "motl-theme"); ?>
-        </table>
       </div>
     </div>
   </div>
