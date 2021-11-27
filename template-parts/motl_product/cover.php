@@ -106,9 +106,9 @@ function conditional_get_table_row($label, $field_name)
           </div>
           <?php $motl_quote_var = "motl-tag-line";
           if (get_field($motl_quote_var)) : ?>
-            <blockquote class="my-6 font-semibold text-2xl text-gray-600 not-italic">
+            <p class="my-6 text-xl text-gray-600">
               <?php the_field($motl_quote_var); ?>
-            </blockquote>
+            </p>
           <?php endif; ?>
         </div>
       </div>
