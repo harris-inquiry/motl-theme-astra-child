@@ -78,32 +78,29 @@ function conditional_get_table_row($label, $field_name)
       </div>
 
       <div id="right-content" class="mt-4 w-full">
-        <div class="sticky top-1/3 mb-8 mt-4">
-          <div id="title" class="top-0 flex justify-between z-50 bg-white py-6 opacity-95 border-2 rounded shadow-md">
-            <div class="mx-4 my-auto">
-              <h1 class="font-medium mb-1 text-4xl"><?php echo the_title(); ?></h1>
-              <p class="text-gray-700 mb-1 text-xl">
+        <div class="sticky top-1/3 mb-8 mt-4" style="margin-left:1rem;">
+          
+          <h1 class="font-medium mb-1 text-4xl"><?php echo the_title(); ?></h1>
+          <p class="text-gray-700 mb-1 text-xl">
+            <?php if (get_field("motl-date-created")): ?>
+              <span class="inline-block">
+                <?php the_field("motl-date-created"); ?>,
+              </span>
+            <?php endif; ?>
 
-                <?php if (get_field("motl-date-created")): ?>
-                  <span class="inline-block">
-                    <?php the_field("motl-date-created"); ?>,
-                  </span>
-                <?php endif; ?>
+            <?php if (get_field("motl-medium")): ?>
+              <span class="inline-block">
+                <?php the_field("motl-medium"); ?>,
+              </span>
+            <?php endif; ?>
 
-                <?php if (get_field("motl-medium")): ?>
-                  <span class="inline-block">
-                    <?php the_field("motl-medium"); ?>,
-                  </span>
-                <?php endif; ?>
+            <?php if (get_field("motl-dimensions")): ?>
+              <span class="inline-block">
+                <?php the_field("motl-dimensions"); ?>
+              </span>
+            <?php endif; ?>
+          </p>
 
-                <?php if (get_field("motl-dimensions")): ?>
-                  <span class="inline-block">
-                    <?php the_field("motl-dimensions"); ?>
-                  </span>
-                <?php endif; ?>
-              </p>
-            </div>
-          </div>
           <?php $motl_quote_var = "motl-tag-line";
           if (get_field($motl_quote_var)) : ?>
             <p class="my-6 text-xl text-gray-600">
