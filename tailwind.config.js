@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
+const isDevMode = require('./utils').isDevMode;
 
-const isDevMode = process.env.NODE_ENV !== 'production';
 
 const minified_theme_settings = {
   colors: {

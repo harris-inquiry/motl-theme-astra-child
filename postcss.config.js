@@ -1,6 +1,6 @@
 let cssnano = require('cssnano');
+const isDevMode = require('./utils').isDevMode;
 
-const isDevMode = process.env.NODE_ENV !== 'production';
 
 let postcssConfig = {
   plugins: [

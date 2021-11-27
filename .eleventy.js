@@ -5,6 +5,5 @@ module.exports = function(eleventyConfig) {
       includes: "includes",
       output: "build/php"
     }, 
-    HTMLTemplateEngine: "ejs",
   }
 }
