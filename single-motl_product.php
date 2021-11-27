@@ -25,7 +25,7 @@ get_header(); ?>
 		<?php astra_primary_content_top(); ?>
 
 		<!-- Custom addition: product cover -->
-		<?php get_template_part( 'template-parts/motl_product/cover' ); ?>
+		<?php get_template_part( 'build/php/cover' ); ?>
 
 		<!-- ?php astra_content_loop(); ? -->
 
