@@ -25,7 +25,7 @@ const minified_theme_settings = {
 
 let tailwindConfig = {
   purge: [
-    './template-parts/**/*.php',
+    './src/php/**/*.php*',
     './*.php',
   ],
   darkMode: false,

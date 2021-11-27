@@ -4,19 +4,6 @@
  * Product cover for MOTL art pages
  * @since 1.0.0
  */
-
-$motl_cover_path_stephen_photo = get_stylesheet_directory_uri() . "/assets/images/stephen.jpg";
-
-function conditional_get_table_row($label, $field_name)
-{
-  if (get_field($field_name)) { ?>
-    <tr>
-      <td><?php echo $label; ?></td>
-      <td><?php the_field($field_name); ?></td>
-    </tr>
-<?php
-  }
-}
 ?>
 
 <div class="container mx-auto p-4">
@@ -74,7 +61,6 @@ function conditional_get_table_row($label, $field_name)
   ?>
 </div>
       </div>
-
       <div id="right-content" class="mt-4 w-full">
         <div class="sticky top-1/3 mb-8 mt-4" style="margin-left:1rem;">
 
@@ -107,6 +93,7 @@ function conditional_get_table_row($label, $field_name)
   <?php endif; ?>
 </div>
       </div>
+
     </div>
   </div>
 
