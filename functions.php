@@ -35,10 +35,10 @@ function motl_child_enqueue_styles_scripts() {
                         array(),
                         CHILD_THEME_MOTL_ASTRA_CHILD_VERSION );
 
-        /*wp_enqueue_script( 'motl-javascript',
-                        get_stylesheet_directory_uri() . "/build/js/product-page.js",
+        wp_enqueue_script( 'motl-javascript',
+                        get_stylesheet_directory_uri() . "/build/js/main.js",
                         array(),
-                        CHILD_THEME_MOTL_ASTRA_CHILD_VERSION );*/
+                        CHILD_THEME_MOTL_ASTRA_CHILD_VERSION );
     }
 }
 add_action( 'wp_enqueue_scripts', 'motl_child_enqueue_styles_scripts', 15 );
