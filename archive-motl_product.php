@@ -30,8 +30,10 @@ get_header(); ?>
 
 		<div id="main" class="site-main">
 			<div class="ast-row masonry-with-columns">
-			<?php if (have_posts()):
-				while (have_posts()): the_post(); ?>
+			<?php $motl_archive_query = new WP_Query( 
+				array('post_type' => 'motl_product'));
+			if ( $motl_archive_query->have_posts() ):
+				while ($motl_archive_query->have_posts()): $motl_archive_query->the_post(); ?>
 
 				<?php get_template_part( 'build/php/archive_info' ); ?>
 

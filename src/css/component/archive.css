@@ -19,7 +19,7 @@
 
 
 .masonry-with-columns {
-  columns: 300px 3;
+  columns: 200px 4;
   column-gap: 1rem;
   > article {
     -webkit-column-break-inside: avoid;

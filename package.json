@@ -15,12 +15,13 @@
   },
   "scripts": {
     "build": "eleventy && NODE_ENV=production npm run build:css && NODE_ENV=production webpack",
-    "watch": "npm run watch:css && npm run ",
+    "watch": "npm run watch:css & npm run watch:webpack & npm run watch:eleventy",
 
     "build:css": "postcss src/css/*.css --dir build/css",
     "watch:css": "npm run build:css && postcss src/css/style-motl_product.css --dir build/css --watch",
     "webpack": "webpack",
     "watch:webpack": "webpack --watch",
-    "eleventy": "eleventy"
+    "eleventy": "eleventy",
+    "watch:eleventy": "eleventy --watch"
   }
 }
