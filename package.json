@@ -4,6 +4,7 @@
     "autoprefixer": "^10.3.1",
     "cssnano": "^5.0.11",
     "ejs": "^3.1.6",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.2",
@@ -14,14 +15,16 @@
     "webpack-cli": "^4.9.1"
   },
   "scripts": {
-    "build": "eleventy && NODE_ENV=production npm run build:css && NODE_ENV=production webpack",
-    "watch": "npm run watch:css & npm run watch:webpack & npm run watch:eleventy",
-
+    "build": "NODE_ENV=production run-s build:*",
+    "watch": "run-p watch:*",
     "build:css": "postcss src/css/*.css --dir build/css",
-    "watch:css": "npm run build:css && postcss src/css/style-motl_product.css --dir build/css --watch",
-    "webpack": "webpack",
+    "watch:css": "postcss src/css/*.css --dir build/css --watch",
+    "build:webpack": "webpack",
     "watch:webpack": "webpack --watch",
-    "eleventy": "eleventy",
+    "build:eleventy": "eleventy",
     "watch:eleventy": "eleventy --watch"
+  },
+  "dependencies": {
+    "masonry-layout": "^4.2.2"
   }
 }

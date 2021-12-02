@@ -18,12 +18,17 @@
 }
 
 
-.masonry-with-columns {
-  columns: 200px 4;
-  column-gap: 1rem;
-  > article {
-    -webkit-column-break-inside: avoid;
-    page-break-inside: avoid;
-    break-inside: avoid;
+#masonry-grid {
+  .grid-item {
+    width: 100%;
+    @screen sm {
+      width: 50%;
+    }
+    @screen md {
+      width: 33%;
+    }
+    @screen lg {
+      width: 25%;
+    }
   }
 }

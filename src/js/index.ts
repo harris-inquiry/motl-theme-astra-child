@@ -1,5 +1,13 @@
-console.log("Hello world");
+// @ts-ignore
+import Masonry from "masonry-layout";
 
-let someNumber: Number = 2;
+window.addEventListener("load", function() { console.log("loaded here man") });
 
-console.log(`${someNumber} is a number`)
+window.addEventListener("load", function() {
+    let grid = document.getElementById("masonry-grid");
+    let masonry = new Masonry(grid, {
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item'
+    })
+    masonry.layout()
+})

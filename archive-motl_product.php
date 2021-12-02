@@ -29,7 +29,7 @@ get_header(); ?>
 		<!-- ?php astra_content_loop(); ? -->
 
 		<div id="main" class="site-main">
-			<div class="ast-row masonry-with-columns">
+			<div id="masonry-grid" class="ast-row">
 			<?php $motl_archive_query = new WP_Query( 
 				array('post_type' => 'motl_product'));
 			if ( $motl_archive_query->have_posts() ):
