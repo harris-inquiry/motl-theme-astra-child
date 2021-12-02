@@ -2,9 +2,4 @@
 @import "component/cover.css";
 
 
-html {
-  scroll-behavior: smooth;
-}
-body {
-  font-family: 'Montserrat', sans-serif;
-}
+

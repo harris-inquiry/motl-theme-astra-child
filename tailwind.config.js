@@ -33,6 +33,9 @@ let tailwindConfig = {
     extend: {},
   },
   plugins: [],
+  corePlugins: {
+    preflight: false,
+  }
 }
 
 if( isDevMode ) {
