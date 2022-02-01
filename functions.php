@@ -48,6 +48,11 @@ function motl_child_enqueue_styles_scripts() {
 
         }
     }
+    wp_enqueue_script( "motl-we-dont-want-users-saving-images-questionmark",
+	    get_stylesheet_directory_uri() . "/prevent_user_interaction.js",
+	    array(),
+	    CHILD_THEME_MOTL_ASTRA_CHILD_VERSION,
+   	    true );
 }
 add_action( 'wp_enqueue_scripts', 'motl_child_enqueue_styles_scripts', 15 );
 
